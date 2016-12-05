@@ -23,9 +23,9 @@ def print_header
 end
 
 def print(students)
-  # print if name begins with n or N
+  # print if name is shorter than 12 characters
   students.each_with_index do |student, index|
-    puts "#{index.to_i + 1}. #{student[:name]} (#{student[:cohort]} cohort)" if student[:name][0].downcase == "n"
+    puts "#{index.to_i + 1}. #{student[:name]} (#{student[:cohort]} cohort)" if student[:name].length < 12
   end
 end
 
