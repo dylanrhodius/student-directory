@@ -22,9 +22,15 @@ def print_header
   puts "-------------"
 end
 
+
+
 def print(students)
-  students.each_with_index do |student, index|
-    puts "#{index.to_i + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
+  iterator_count = 0
+  index = students[iterator_count]
+  until iterator_count == students.length do
+    puts "#{iterator_count + 1}. #{index[:name]} (#{index[:cohort]} cohort)"
+    iterator_count += 1
+    index = students[iterator_count]
   end
 end
 
