@@ -23,8 +23,9 @@ def print_header
 end
 
 def print(students)
+  # print if name begins with n or N
   students.each_with_index do |student, index|
-    puts "#{index.to_i + 1}. #{student[:name]} (#{student[:cohort]} cohort)"
+    puts "#{index.to_i + 1}. #{student[:name]} (#{student[:cohort]} cohort)" if student[:name][0].downcase == "n"
   end
 end
 
